@@ -1,0 +1,33 @@
+PS C:\users\hori> mkdir git_challenge
+
+
+    ディレクトリ: C:\users\hori
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----        2023/12/09     18:15                git_challenge
+
+
+PS C:\users\hori> cd c:\users\hori\git_challenge
+PS C:\users\hori\git_challenge> git init
+Initialized empty Git repository in C:/Users/hori/git_challenge/.git/
+PS C:\users\hori\git_challenge> git add hello_world.txt
+fatal: pathspec 'hello_world.txt' did not match any files
+PS C:\users\hori\git_challenge> echo "hello, world!" >> hello_world.txt
+PS C:\users\hori\git_challenge> git add hello_world.txt
+PS C:\users\hori\git_challenge> git commit -m "hello_world.txtを追加"
+[master (root-commit) 4dd7cb4] hello_world.txtを追加
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 hello_world.txt
+PS C:\users\hori\git_challenge> git add hello_world.txt
+PS C:\users\hori\git_challenge> git commit -m "日本語訳を追記"
+[master 1ce5a23] 日本語訳を追記
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+PS C:\users\hori\git_challenge> git log --oneline
+1ce5a23 (HEAD -> master) 日本語訳を追記
+4dd7cb4 hello_world.txtを追加
+PS C:\users\hori\git_challenge> git branch -m master main
+PS C:\users\hori\git_challenge> git log --oneline
+1ce5a23 (HEAD -> main) 日本語訳を追記
+4dd7cb4 hello_world.txtを追加
